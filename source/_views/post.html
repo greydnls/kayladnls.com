@@ -1,40 +1,54 @@
 {% extends "default" %}
 {% block content_wrapper %}
-    <article>
-        <header>
-            <h2>{{ page.title }} <small>post</small></h2>
-        </header>
-        <div>
-            {{ page.blocks.content|raw }}
+<article class="post">
+    <div class="row">
+        <div class="col-sm-2">
+            <ul class="post-info">
+                <li>
+                    {{ page.date|date(site.default_date_format) }}
+                </li>
+                <li>
+                    <a href="#" class="big">252</a>
+                    Comments
+                </li>
+                {% if page.categories %}
+                <li class="hidden-xs">
+                    Categories:
+                    {% for category in page.categories %}
+                    <a class="label labe-default label-pink" href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>
+                    {% endfor %}
+                </li>
+                {% endif %}
+            </ul>
         </div>
-        {% if page.categories %}
-            <p class="categories">
-            Categories:
-            {% for category in page.categories %}
-            <a href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
-        {% if page.tags %}
-            <p class="tags">
-            Tags:
-            {% for tag in page.tags %}
-            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
+        <div class="col-sm-10">
+            <a href="#" class="post-title">{{ page.title }}</a>
 
-        {% if page.previous_post or page.next_post %}
-            <nav class="article">
-                <ul>
-                    {% if page.next_post %}
-                        <li>Next: <a class="next" href="{{ site.url }}{{ page.next_post.url }}" title="{{ page.next_post.title }}"><span class="title">{{ page.next_post.title }}</span></a></li>
-                    {% endif %}
-                    {% if page.previous_post %}
-                        <li>Previous: <a class="previous" href="{{ site.url }}{{ page.previous_post.url }}" title="{{ page.previous_post.title }}"><span class="title">{{ page.previous_post.title }}</span></a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        {% endif %}
-    </article>
+            <div class="post-content">
+                <div class="text-editor">
+                    {{ page.blocks.content|raw }}
+                </div>
+            </div>
+            {% if page.previous_post or page.next_post %}
+            <div class="other-posts-wrap">
+                {% if page.previous_post %}
+                <a href="{{ site.url }}{{ page.previous_post.url }}" class="prev">
+                    <i class="fa fa-angle-left"></i>
+
+                    <div class="text">{{ page.previous_post.title }}</div>
+                </a>
+                {% endif %}
+                {% if page.next_post %}
+                <a href="{{ site.url }}{{ page.next_post.url }}" class="next">
+                    <i class="fa fa-angle-right"></i>
+
+                    <div class="text">{{ page.next_post.title }}</div>
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</article>
+
 {% endblock %}

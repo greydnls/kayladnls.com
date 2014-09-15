@@ -1,0 +1,26 @@
+<!--START MENU-->
+    <nav class="menu">
+      <!--START SEARCH INPUT-->
+      <div class="input-group search-group">
+        <form action=""><span class="input-group-btn">
+            <button type="button" class="btn"><i class="fa fa-search"></i></button></span>
+          <input type="text" placeholder="Search..." name="search" class="form-control">
+          <input type="submit" value="submit" class="hidden">
+        </form>
+      </div>
+      <!--END SEARCH INPUT-->
+
+      <!--START MENU BUTTON-->
+      <button class="menu-button closed"><span class="icon top"></span><span class="icon middle"></span><span class="icon bottom"></span></button>
+      <!--END MENU BUTTON-->
+
+      <!--START MENU LIST-->
+         <ul class="nav">
+             <li><a class="active" href="{{ site.url }}">Home</a></li>
+             <li><a href="{{ site.url }}/blog">Archive</a></li>
+             <li><a href="{{ site.url }}/blog/categories">Categories</a></li>
+             <li><a href="{{ site.url }}/about">About</a></li>
+         </ul>
+      <!--END MENU LIST-->
+    </nav>
+    <!--END MENU-->

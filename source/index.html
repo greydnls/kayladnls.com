@@ -8,21 +8,37 @@ use:
     - posts
 ---
 {% for post in page.pagination.items %}
-    <article>
-        <header>
-            <h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-        </header>
-        <div>
-            {{ post.blocks.content|raw }}
+    <article class="post">
+        <div class="row">
+            <div class="col-sm-2">
+                <ul class="post-info">
+                    <li>
+                        {{ post.date|date(site.default_date_format) }}
+                    </li>
+                    <li>
+                        <a href="#" class="big">252</a>
+                        Comments
+                    </li>
+                    {% if post.categories %}
+                    <li class="hidden-xs">
+                        Categories:
+                        {% for category in post.categories %}
+                        <a class="label labe-default label-pink" href="{{ site.url }}/blog/categories/{{ category|url_encode(true) }}">{{ category }}</a>
+                        {% endfor %}
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-sm-10">
+                <a class="post-title" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+
+                <div class="post-content">
+                    <div class="text-editor">
+                        {{ post.blocks.content|raw }}
+                    </div>
+                </div>
+            </div>
         </div>
-        {% if post.meta.tags %}
-            <p class="tags">
-            Tags:
-            {% for tag in post.meta.tags %}
-            <a href="{{ site.url }}/blog/tags/{{ tag|url_encode(true) }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-            {% endfor %}
-            </p>
-        {% endif %}
     </article>
 {% endfor %}
 {% if page.pagination.previous_page or page.pagination.next_page %}
