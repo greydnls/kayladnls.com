@@ -3,5 +3,5 @@
 # in a template to get the contents of the `title` key.
 title: KaylaDnls.com
 subtitle:
-url: http://localhost:8888
+url: http://localhost:8070
 default_date_format: M d, Y
