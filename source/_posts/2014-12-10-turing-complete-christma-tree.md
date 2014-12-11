@@ -54,8 +54,6 @@ But how do you DO it? Well, let me show you.
 
 End result, I want to create this cool looking graph thing. That's how a picture it, a graph, or grid, Once you're there, it becomes a matter of some setup, and then some iteration. It looks like this: 
 
-<div>  </div>
-
 ```
 //First thing's first, let's codify those rules. 
 $rules = array(
