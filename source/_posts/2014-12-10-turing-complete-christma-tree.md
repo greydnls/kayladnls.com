@@ -8,9 +8,6 @@ use:
     - posts_categories
 ---
 
-Undecidable Turing-Complete Christmas Tree Automata in Practice
-===========
-
 ####"Have you ever heard of Rule 30?"
 A friend chirped me in skype asking if I was familiar with "Rule 30". He's going in for a job interview and they'd asked him to code this Rule 30 as an exercise. I hadn't heard of it, but I was intruiged, and I'm always one to try to help a friend. Off to the Google-Mobile, Batman!
 
@@ -118,7 +115,7 @@ Tada!
 
 ####Merry Christmas!
 
-For mine, I changed 1 to '/' and 0 to '*'. Why? Because it's December, and it looks festive, that's why. I just taught you how to output a Christmas tree in your terminal!
+For mine, I changed 1 to `'/'` and 0 to `'*'`. Why? Because it's December, and it looks festive, that's why. I just taught you how to output a Christmas tree in your terminal!
 
 Clearly, with the added nerdery, this is no longer a Christmas Tree. This is what we call a FSM Tree. The perfect DIY gift for your budget conscious nerd. 
 
@@ -132,28 +129,24 @@ You may be wondering why the post title references Turing completeness<sup>(4)</
 
 The process for running through Rule 110 is the same as Rule 30 (that holds true for all 255 rules, by the by), the only change is the rules. So, if you're interested, here are the rules for Rule 110 (in Christmas tree format, of course)
 
-<div>  </div>
+    $rules = array(
+        '///'=> '*',
+        '//*' => '/',
+        '/*/'=> '/',
+        '/**' =>'*',
+        '*//'=> '/',
+        '*/*' => '/',
+        '**/'=> '/',
+        '***' => '*'
+    );
 
-~~~~~~~~~~~~~~~~~~~~~
-
-$rules = array(
-    '///'=> '*',
-    '//*' => '/',
-    '/*/'=> '/',
-    '/**' =>'*',
-    '*//'=> '/',
-    '*/*' => '/',
-    '**/'=> '/',
-    '***' => '*'
-);
-~~~~~~~~~~~~~~~~~~~~~
 
 Go forth and make a Turing machine. 
 
 
 References
 
-1. Wolfram, S., "Statistical mechanics of cellular automata", http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.55.601 }
- 2. Elementary Cellular Automaton, http://mathworld.wolfram.com/ElementaryCellularAutomaton.htm}
- 3. Conway's game of life, http://en.wikipedia.org/wiki/Conway%27s_Game_of_Lif}
- 4. Turing Complete, http://c2.com/cgi/wiki?TuringComplet}
+1. Wolfram, S., "Statistical mechanics of cellular automata", [http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.55.601](http://journals.aps.org/rmp/abstract/10.1103/RevModPhys.55.601) 
+2. Elementary Cellular Automaton, [http://mathworld.wolfram.com/ElementaryCellularAutomaton.htm](http://mathworld.wolfram.com/ElementaryCellularAutomaton.htm)
+3. Conway's game of life, [http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+4. Turing Complete, [http://c2.com/cgi/wiki?TuringComplete](http://c2.com/cgi/wiki?TuringComplete)

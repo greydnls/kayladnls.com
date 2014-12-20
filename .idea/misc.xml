@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/source/assets/js/init.js" />
-    <file url="file://$PROJECT_DIR$/source/assets/js/jquery.dropotron.min.js" />
-    <file url="file://$PROJECT_DIR$/source/assets/js/jquery.min.js" />
-    <file url="file://$PROJECT_DIR$/source/assets/js/jquery.onvisible.min.js" />
-    <file url="file://$PROJECT_DIR$/source/assets/js/jquery.scrolly.min.js" />
-    <file url="file://$PROJECT_DIR$/source/assets/js/skel-layers.min.js" />
-    <file url="file://$PROJECT_DIR$/source/assets/js/skel.min.js" />
-  </component>
   <component name="ProjectRootManager" version="2" />
 </project>
 
