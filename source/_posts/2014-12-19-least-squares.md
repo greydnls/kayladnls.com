@@ -26,7 +26,7 @@ You want to create a function that best estimates future y, given an x value. Th
 
 (1) ![image](http://chart.apis.google.com/chart?cht=tx&chl=%5Chat%7BY%7D%20%3D%20a%20%2BbX)
 
-Where `Y` is the **predicted value**, `m` is the **slope** and `b` is the **y-intercept** of the line,  
+Where `Y` is the **predicted value**, `b` is the **slope** and `a` is the **y-intercept** of the line,  
 
 You want a line that is going to be closest to your data, that is, where the distance between the points and the estimation line is the smallest. The distance between the actual points and your estimation line is the error, and obviously, you want to minimize error, to increase accuracy. 
 
